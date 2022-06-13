@@ -1,4 +1,4 @@
-const denominador = (...r1) => {
+const resistenciaEquivalente = (...r1) => {
   const resistencias = [...r1];
   let denominador = 1;
   let numerador = 0;
@@ -8,8 +8,11 @@ const denominador = (...r1) => {
   for (let i = 0; i < resistencias.length; i++) {
     numerador += denominador / resistencias[i];
   }
-  console.log(`Numerador ${numerador} : Denominador ${denominador}`);
-
   return (denominador / numerador).toFixed(2);
 };
-console.log(denominador(120, 5, 2000));
+const recuperarValores = () => {
+  let resistencias = document.getElementById("resistencias").value;
+  const r = resistencias.split(",");
+  rp = parseFloat(resistenciaEquivalente(...r));
+  document.getElementById("resistenciaE").innerHTML = `${rp} Ω`;
+};
