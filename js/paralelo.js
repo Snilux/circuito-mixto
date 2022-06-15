@@ -1,5 +1,5 @@
 const resistenciaEquivalente = (...r1) => {
-  const resistencias = [...r1];
+  let resistencias = [...r1];
   let denominador = 1;
   let numerador = 0;
   for (let i = 0; i < resistencias.length; i++) {
@@ -16,3 +16,8 @@ const recuperarValores = () => {
   rp = parseFloat(resistenciaEquivalente(...r));
   document.getElementById("resistenciaE").innerHTML = `${rp} Ω`;
 };
+function obtenerResistencias() {
+  let resistencias = document.getElementById("resistencias").value;
+  const r = resistencias.split(",");
+  corrienteResistencias(...r);
+}

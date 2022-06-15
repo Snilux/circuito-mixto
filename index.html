@@ -6,26 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    </style>
     <title>Calcular MIXTO</title>
 </head>
 
 <body>
     <h1>Calcular ciruito MIXTO</h1>
     <form>
-        <h2>Coloca los valores de las resistencias paralelas separadas de una ","</h2>
-        <input type="text" id="resistencias">
+        <h2>Coloca los valores de las resistencias en paralelo separadas de una ","</h2>
+        <img src="assets/circuitos-mixtos-paralelo.jpg" alt="circuitos-mixtos-paralelo">
+        <input type="text" id="resistencias" placeholder="Resistencias Paralelo">
         <input type="button" value="Calcular" onclick="recuperarValores()">
         <label id="resistenciaE"></label>
 
         <h2>Coloca los varoles de las resistencias en serie separadas por una ","</h2>
-        <input type="text" id="resistenciasS">
+        <img src="assets/circuitos-mixtos-serie.jpg" alt="circuitos-mixtos-serie" class="img1">
+        <img src="assets/circuitos-mixtos-serie1.jpg" alt="circuitos-mixtos-serie" class="img2">
+        <input type="text" id="resistenciasS" placeholder="Resistencias Serie">
         <input type="button" value="Calcular" onclick="obtenerValores()">
         <label id="resistenciaT"></label>
 
         <h2>Coloca el voltaje</h2>
         <input type="text" id="voltaje">
-        <input type="button" value="Calcular" onclick="obtenerValores()">
-        <label id="voltaje"></label>
+        <label id="voltajeE"></label>
 
         <input type="button" value="Generar" onclick="table()">
     </form>
@@ -40,15 +45,17 @@
         </thead>
         <tbody>
             <tr>
-                <td id="voltajeT"></td>
-                <td id="resistenciaTA"></td>
-                <td id="corriente"></td>
+                <td id="voltajeT">...</td>
+                <td id="resistenciaTA">...</td>
+                <td id="corriente">...</td>
             </tr>
         </tbody>
     </table>
     <script>
         var rp = 0;
         var rT = 0;
+        var corrienteT = 0
+        var voltajeT = 0
     </script>
     <script src="js/paralelo.js"></script>
     <script src="js/serie.js"></script>

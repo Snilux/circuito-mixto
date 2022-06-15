@@ -1,3 +1,92 @@
-table {
-  border: 1 solid #000;
+body {
+  background-color: cornflowerblue;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+}
+h2 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 25px;
+}
+img {
+  height: 300px;
+  width: 400px;
+  display: block;
+}
+#resistencias {
+  margin-top: 20px;
+}
+input[type="text"] {
+  width: 400px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+input[type="text"]:focus {
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+input[type="button"] {
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #fff;
+}
+label {
+  font-size: 22px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 800;
+}
+table,
+th,
+td {
+  border: 1px solid #000;
+  font-size: 20px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: "Varela Round", sans-serif;
+}
+th,
+td {
+  font-size: 25px;
+}
+td {
+  background: rgb(57, 101, 197);
+}
+th {
+  background: rgb(101, 57, 197);
+}
+.img1 {
+  height: 250px;
+}
+.img2 {
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  input[type="button"] {
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+  input[type="text"] {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  label {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+  }
 }
